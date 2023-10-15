@@ -1,2 +1,4 @@
-from Geometry_shapes import Circle
-from Geometry_shapes import Rectangle
+from Circle import Circle
+from Rectangle import Rectangle
+
+rectangle1 = Rectangle()
