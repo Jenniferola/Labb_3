@@ -26,7 +26,6 @@ class Rectangle(Geometry_shapes):
         else:
             print("False")
 
-
     def __str__(self):
         """String representation of an object for a user"""
         return f"{self.name} has got the coordinates ({self.x_position},{self.y_position}) and the sides {self.side1} and {self.side2}"
@@ -36,7 +35,6 @@ class Rectangle(Geometry_shapes):
         """String representation an object for a programmer"""
         return f"{self.name}(coordinates=({self.x_position},{self.y_position}), side1={self.side1}, side2={self.side2})"
         
-    
     
     #def __eq__(self,other):
         """overload of == to check equality """
