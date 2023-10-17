@@ -22,7 +22,7 @@ print(rectangle)
 
 print(repr(rectangle))
 
-circle1.draw_shapes()
+circle1.draw_shapes(circle2)
 
 circle1.is_inside_circle(7,5)
 

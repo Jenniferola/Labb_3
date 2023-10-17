@@ -1,9 +1,7 @@
-import Geometry_shapes
-import math
+import Geometry_shapes, math
 import matplotlib.pyplot as plt
 
 class Circle(Geometry_shapes):
-
 
     def __init__ (self, name, x_position, y_position, radius = None):
         super().__init__(name, x_position, y_position)
@@ -25,7 +23,7 @@ class Circle(Geometry_shapes):
         else:
             print("False")
 
-    def draw_shapes(self):
+    def draw_shapes(self,shape):
             
             """Draw geometry_shapes in matplotlib """
             plt.title("Geometry shapes")
@@ -36,7 +34,7 @@ class Circle(Geometry_shapes):
             plt.axis("equal")
 
             plot_cirkel1 =plt.Circle((self.x_position, self.y_position), radius= self.radius, color = "green", alpha =.4)
-            plot_cirkel2 =plt.Circle((circle2.x_position, circle2.y_position), radius=circle2.radius, color = "red", alpha =.3)
+            plot_cirkel2 =plt.Circle((shape.x_position, shape.y_position), radius=shape.radius, color = "red", alpha =.3)
             plot_testcircle = plt.Circle((7, 5), radius= 0.1, color = "black", alpha =.9)
 
             plt.gca().add_artist(plot_cirkel1)
