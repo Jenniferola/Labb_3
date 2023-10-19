@@ -19,11 +19,8 @@ class Circle(Geometry_shapes):
         return (self.radius * 2) * math.pi
     
     def is_unit_circle(self):
-        if self.x_position == 0 and self.y_position == 0 and self.radius == 1:
-            print(f"True")
-        else:
-            print(f"no")
-
+        return self.radius == 0
+            
     def draw_shapes(self,shape):
      
             """Draw geometry_shapes in matplotlib """
@@ -46,7 +43,7 @@ class Circle(Geometry_shapes):
     def is_inside_circle(self, x_testpoint, y_testpoint):
         circle_equation = (x_testpoint - self.x_position) **2 + (y_testpoint - self.y_position) **2
         circle_equation = circle_equation**2   
-        
+
         if circle_equation <= self.radius:
             print("True")
         else:
@@ -62,45 +59,29 @@ class Circle(Geometry_shapes):
         """String representation an object for a programmer"""
         return f"coordinates= ({self.x_position},{self.y_position}), radius={self.radius})"
         
-
     def __eq__(self,other):
-        """overload of == to check if the radius of two circles are the same. False if compared with a rectangle."""
-        try:
-            return self.radius == other.radius
-        except:
-            print("False")
-
+        """overload of == to check if the radius of two circles are the same"""
+        return self.radius == other.radius
 
     def __lt__(self,other):
         """overload of < """
-        try:
-            return self.area < other.area
-        except:
-            print("False")
-
+        return self.area < other.area
+     
 
     def __gt__(self,other):
         """overload of > """
-        try:
-            return self.area > other.area
-        except:
-            print("False")
-
+        return self.area > other.area
+      
 
     def __le__(self,other):
         """overload of <= """
-        try:
-            return self.area <= other.area
-        except:
-            print("False")
+        return self.radius <= other.radius
+      
 
-    
     def __ge__(self,other):
         """overload of >= """
-        try:
-            return self.area >= other.area
-        except:
-            print("False")
+        return self.area >= other.area
+        
 
 
 

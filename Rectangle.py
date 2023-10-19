@@ -2,12 +2,13 @@ from Geometry_shapes import Geometry_shapes
 
 class Rectangle(Geometry_shapes):
 
-    def __init__ (self, x_position, y_position, width = None, height= None):
+    def __init__ (self, x_position, y_position, width = None, height= None, radius= None):
         super().__init__(x_position, y_position)
         self.x_position = x_position
         self.y_position = y_position
         self.width = width
         self.height = height
+        self.radius = None
     
     @property
     def area(self):
@@ -37,43 +38,28 @@ class Rectangle(Geometry_shapes):
         
     
     def __eq__(self,other):
-        """overload of == to check equality """
-        try:
-            return self.area == other.area
-        except:
-            print("False")
-
-
+        """overload of =="""
+        return self.area == other.radius
+        
     def __lt__(self,other):
         """overload of < """
-        try:
-            return self.area < other.area
-        except:
-            print("False")
+        return self.area < other.area
 
 
     def __gt__(self,other):
         """overload of > """
-        try:
-            return self.area > other.area
-        except:
-            print("False")
-
+        return self.area > other.area
+       
 
     def __le__(self,other):
         """overload of <= """
-        try:
-            return self.area <= other.area
-        except:
-            print("False")
-
+        return self.area <= other.area
+        
     
     def __ge__(self,other):
         """overload of >= """
-        try:
-            return self.area >= other.area
-        except:
-            print("False")
+        return self.area >= other.area
+        
 
 
 
