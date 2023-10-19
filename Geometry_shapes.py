@@ -1,7 +1,6 @@
 class Geometry_shapes:
 
-    def __init__(self, name, x_position = None, y_position = None):
-        self.name = name
+    def __init__(self, x_position = None, y_position = None):
         self.x_position = x_position
         self.y_position = y_position
 

@@ -1,17 +1,18 @@
-import Geometry_shapes, math
+from Geometry_shapes import Geometry_shapes
 import matplotlib.pyplot as plt
+import math
 
 class Circle(Geometry_shapes):
-
-    def __init__ (self, name, x_position, y_position, radius = None):
-        super().__init__(name, x_position, y_position)
+    
+    def __init__ (self, x_position, y_position, radius = None):
+        super().__init__(x_position, y_position)
         self.radius = radius
         
     @property
     def area(self):
-        """ returns area of a circle """
+        """returns area of a circle """
         return (self.radius**2) * math.pi
-    
+
     @property
     def perimeter(self):
         """Returnes the perimeter of a circle """
@@ -21,10 +22,10 @@ class Circle(Geometry_shapes):
         if self.x_position == 0 and self.y_position == 0 and self.radius == 1:
             print(f"True")
         else:
-            print("False")
+            print(f"no")
 
     def draw_shapes(self,shape):
-            
+     
             """Draw geometry_shapes in matplotlib """
             plt.title("Geometry shapes")
             plt.xlabel("x-coordinates")
@@ -54,12 +55,12 @@ class Circle(Geometry_shapes):
 
     def __str__(self):
         """String representation of an object for a user"""
-        return f"{self.name} has got the coordinates ({self.x_position},{self.y_position}) and the radius {self.radius}"
+        return f"coordinates = ({self.x_position},{self.y_position}) and the radius {self.radius}"
         
 
     def __repr__(self):
         """String representation an object for a programmer"""
-        return f"{self.name}(coordinates=({self.x_position},{self.y_position}), radius={self.radius})"
+        return f"coordinates= ({self.x_position},{self.y_position}), radius={self.radius})"
         
 
     def __eq__(self,other):
@@ -70,19 +71,38 @@ class Circle(Geometry_shapes):
             print("False")
 
 
-    #def __lt__(self):
+    def __lt__(self,other):
         """overload of < """
-        ...
+        try:
+            return self.area < other.area
+        except:
+            print("False")
 
-    #def __gt__(self):
+
+    def __gt__(self,other):
         """overload of > """
-        ...
+        try:
+            return self.area > other.area
+        except:
+            print("False")
 
-    #def __le__(self):
+
+    def __le__(self,other):
         """overload of <= """
-        ...
-    
-    #def __ge__(self):
-        """overload of this >= """
+        try:
+            return self.area <= other.area
+        except:
+            print("False")
 
+    
+    def __ge__(self,other):
+        """overload of >= """
+        try:
+            return self.area >= other.area
+        except:
+            print("False")
+
+
+
+    
 

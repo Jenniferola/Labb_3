@@ -1,38 +1,35 @@
-import Geometry_shapes
-import Circle as Circle
-import Rectangle as Rectangle
 
-class test_Geometry_shapes:
+from Circle import Circle
+from Rectangle import Rectangle
 
-    def test_translate():
-        steps_x_position = 5
-        steps_y_position = 5
+def test_rectangle_area():
+    my_rectangle = Rectangle(0,0,3,4)
+    assert my_rectangle.area == 12
 
-        assert x_position == 5 and y_position == 5
+def test_rectangle_perimeter():
+    my_rectangle = Rectangle(0,0,4,6)
+    assert my_rectangle.perimeter == 20
+    
+def test_circle_area():
+    my_circle = Circle(0,0,1)
+    assert my_circle.area == 3.141592653589793
+    
+def test_circle_perimeter():
+    my_circle = Circle(0,0,1)
+    assert my_circle.perimeter == 6.283185307179586
 
-class test_circle:
+def test_circle_translate_x_position():
+    my_circle = Circle(1,2,1)
+    assert my_circle.x_position == 1
 
-    def test_is_unit_circle():
-        assert x_position == 0
+def test_circle_translate_y_position():
+    my_circle = Circle(1,2,1)
+    assert my_circle.y_position == 2
 
 
-    def test_is_inside_circle():
 
 
-class test_Rectangle():
-
-    def test_area():
-        side1 = 5
-        side2 = 5
-
-        assert side1 * side2 == 25
-
-    def test_perimeter():
-        assert self.side1*2 +self.side2*2
-
-    def test_is_square():
-        ...
-           
+        
 
 
     
