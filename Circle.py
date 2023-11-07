@@ -41,14 +41,15 @@ class Circle(Geometry_shapes):
 
             
     def is_inside_circle(self, x_testpoint, y_testpoint):
-        circle_equation = (x_testpoint - self.x_position) **2 + (y_testpoint - self.y_position) **2
-        circle_equation = circle_equation**2   
 
-        if circle_equation <= self.radius:
-            print("True")
-        else:
-            print("False")
-        
+        circle_equation = (x_testpoint - self.x_position) **2 + (y_testpoint - self.y_position)**2
+
+        if circle_equation <= self.radius **2: 
+            print(True) 
+        else: 
+            print(False)
+
+
 
     def __str__(self):
         """String representation of an object for a user"""
@@ -61,21 +62,15 @@ class Circle(Geometry_shapes):
         
     def __eq__(self,other):
         """overload of == to check if the radius of two circles are the same"""
-        return self.radius == other.radius
+        return self.area == other.area
 
     def __lt__(self,other):
         """overload of < """
         return self.area < other.area
      
-
     def __gt__(self,other):
         """overload of > """
         return self.area > other.area
-      
-
-    def __le__(self,other):
-        """overload of <= """
-        return self.radius <= other.radius
       
 
     def __ge__(self,other):

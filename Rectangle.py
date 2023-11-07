@@ -27,6 +27,12 @@ class Rectangle(Geometry_shapes):
         else:
             print("False")
 
+    def is_inside_rectangle(self,x_testpoint, y_testpoint):
+        if x_testpoint <= self.width and y_testpoint <= self.height:
+            print(True)
+        else:
+            print(False)
+
     def __str__(self):
         """String representation of an object for a user"""
         return f"rectangle´s coordinates are ({self.x_position},{self.y_position}), the width is {self.width} and the height is {self.height}"
@@ -39,7 +45,7 @@ class Rectangle(Geometry_shapes):
     
     def __eq__(self,other):
         """overload of =="""
-        return self.area == other.radius
+        return self.area == other.area
         
     def __lt__(self,other):
         """overload of < """
@@ -49,12 +55,7 @@ class Rectangle(Geometry_shapes):
     def __gt__(self,other):
         """overload of > """
         return self.area > other.area
-       
-
-    def __le__(self,other):
-        """overload of <= """
-        return self.area <= other.area
-        
+           
     
     def __ge__(self,other):
         """overload of >= """

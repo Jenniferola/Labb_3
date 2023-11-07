@@ -11,9 +11,13 @@ print(circle1 == circle2)
 
 print(circle1 == rectangle)
 
+circle1.is_inside_circle(2,2)
+
 circle1.is_inside_circle(0.5,0.5)
 
-circle1.translate(5,5)
+rectangle.is_inside_rectangle(0.5,0.5)
+
+circle1.translate(3,6)
 
 rectangle.is_square()
 
